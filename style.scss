@@ -1,0 +1,691 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+@mixin flex($vert:center,$hor:center,$pos:row) {
+    display: flex;
+    flex-direction: $pos;
+    align-items: $vert;
+    justify-content: $hor;
+}
+@mixin backImage() {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@mixin createBtn($wBtn) {
+    width: $wBtn;
+height: 50px;
+background-color: #ffd200;
+color: #000000;
+font-weight: bold;
+cursor: pointer;
+}
+
+
+$colorLB:#292929;
+$clrLG:#969696;
+$widthArea:940px;
+$Procent:100%;
+
+*{
+    margin:0;
+    outline: none;
+    border:none;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+.header {
+    width: $Procent;
+    height: 130px;
+    @include flex();
+    &-content {
+        width: $widthArea;
+        height: $Procent;
+        @include flex(center,space-between);
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    &-logo {
+        width: 231px;
+        height: 40px;
+        @include flex(center,space-between);
+        
+    }
+    &-callback {
+        width: 392px;
+        height: 40px;
+        @include flex(center,space-between);
+        &__button {
+            width: 160px;
+            height: 40px;
+            border: 2px solid #292929;
+            background: none;
+            color:$colorLB;
+            font-weight: bold;
+            cursor: pointer;
+            position: relative;
+        }
+        &__button:before {
+            position: absolute;
+            content:"";
+            width: 10px;
+            height: 10px;
+            border-radius:50%;
+            top:-5px;
+            left:-5px;
+            background-color: $colorLB;
+            display: none;
+        }
+        
+    }
+    
+    &-menu {
+        width: $widthArea;
+        height: 60px;
+        background-color: #ffd200;
+        @include flex(center,space-around);
+        position: absolute;
+        top: 100px;
+        
+
+    }
+}
+.menu-box {
+    width: 150px;
+    height: $Procent;
+    @include flex();
+   &__text {
+       font-weight: bold;
+       cursor: pointer;
+   }
+}
+.logo-text {
+    width: 179px;
+    height: $Procent;
+    @include flex(flex-start,space-between,column);
+    &__title {
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    &__subtitle {
+        font-size:11px;
+        color: $clrLG;
+        font-weight: 300;
+    }
+}
+.callback-phone {
+    width: 172px;
+    height: 36px;
+    @include flex(flex-end,space-between,column);
+    &__number {
+        font-size:18px;
+    }
+    &__text {
+        font-size: 11px;
+        color:$clrLG;
+    }
+}
+
+.banner {
+    width: $Procent;
+    height: 550px;
+    background-image:url(/Image/banner.png);
+    @include backImage();
+    background-color: rgba(0,0,0,.8);
+    @include flex();
+    &-content {
+        width: $widthArea;
+        height: $Procent;
+        @include flex(center,flex-start);
+    }
+    &-info {
+        width: 408px;
+        height: 240px;
+        @include flex(flex-start,space-between,column);
+        color: #ffffff;
+        &__title {
+            text-transform: uppercase;
+            font-size: 36px;
+            
+        }
+        &__text {
+            font-size: 14px;
+           font-weight: 300;
+            line-height: 22px;
+        }
+    }
+    &-desc {
+        width: 380px;
+        height: 50px;
+        @include flex(center,space-between);
+        color:#ffffff;
+        &__btn {
+            @include createBtn(200px);
+        }
+        
+        
+        &__link {
+            font-weight: bold;
+            color: #ffffff;
+            margin-left: 5px;
+            
+        }
+
+    }
+}
+
+.product {
+    width: $Procent;
+    height: 707px;
+    @include flex();
+
+    &-content {
+        width: $widthArea;
+        height: $Procent;
+        @include flex(center,space-around,column);
+        &__title {
+            text-transform: uppercase;
+        }
+    }
+    &-info {
+        width: $Procent;
+        height: 470px;
+        @include flex($hor:space-around);
+    }
+    &-box {
+        width: 300px;
+        height: 470px;
+        border: 2px solid #f6f6f6;
+        @include flex(center,space-around,column);
+        &__img{
+            width: 253px;
+            height: 145px;
+        }
+        &__title{
+            font-size: 15px;
+            font-weight: 500;
+        }
+        &__text{
+            width: 225px;
+            height: 59px;
+            color: #626262;
+            font-size :13px;
+            text-align: center;
+        }
+        &__price{
+            font-weight: 500;
+        }
+        &__btn{
+            @include createBtn(180px)
+        }
+    }
+}
+
+.advantages {
+    width: $Procent;
+    height: 490px;
+    @include flex();
+    background-color: #f4f4f4;
+    &-content {
+        width: $widthArea;
+        height: $Procent;
+        box-sizing: border-box;
+        @include flex(center,space-around,column);
+    }
+    &-info {
+        width: $Procent;
+        height: 256px;
+        @include flex($hor:space-between);
+    }
+    &-box{
+        width: 300px;
+        height: 253px;
+        border: 2px solid #ffffff;
+        transition: .3s;
+        @include flex(center,space-around ,column );
+        &__text {
+            width: 238px;
+            height: 47px;
+            text-align: center;
+            font-size: 12px;
+            line-height: 18px;
+        }
+        &:hover {
+            background-color: #ffffff;
+        }
+    }
+}
+.popular {
+    width: $Procent;
+    height: 593px;
+    @include flex();
+    &-content {
+        width: $widthArea;
+        height: $Procent;
+        @include flex(center,space-around,column);
+    }
+    &-info {
+        width: $Procent;
+        height: 345px;
+        @include flex ($hor:space-around);
+    }
+    
+    &-box {
+        width: 220px;
+        height: $Procent;
+        @include flex(center,space-around,column);
+        position: relative;
+        &__title  {
+            font-size: 13px;
+            font-weight: 400;
+            text-decoration: underline;
+            color: $colorLB;
+        }
+        &__price {
+            font-size:10px;
+            color: $clrLG;
+        }
+        &__btn {
+            @include createBtn(180px)
+        }
+        
+
+    }
+    &-box--sale:before {
+        position: absolute;
+        content:'АКЦИЯ';
+        width: 55px;
+        height: 23px;
+        @include flex();
+        color: #FFFFFF;
+        background-color: #ff0000;
+        font-size: 10px;
+        top: 23px;
+        left: 30px;
+        
+    }
+    &__sale {color: #ff0000;
+        font-size: 16px;
+        font-weight: 500;
+        margin-left: 10px;
+
+    }
+
+}
+
+
+.services {
+    width: $Procent;
+    height: 490px;
+    background-color: #f4f4f4;
+    @include flex();
+    &-content {
+        width: $widthArea;
+        height: $Procent;
+        box-sizing: border-box;
+        @include flex(center,space-around,column);
+    }
+    &-info {
+        width: $Procent;
+        height: 253px;
+        @include flex($hor:space-between);
+    }
+    &-box {
+        width: 300px;
+        height: $Procent;
+        border: 2px solid #ffffff;
+        @include flex(center,space-around ,column );
+        &__text {
+            font-size: 15px;
+            font-weight: 500;
+            text-decoration: underline;
+            color: $colorLB;
+        }
+    }
+}
+
+.locate {
+    width: $Procent;
+    height: 520px;
+    @include flex();
+    background-image: url(/Image/mab_back.png);
+    @include backImage();
+    &-content {
+        width: $widthArea;
+        height: $Procent;
+        box-sizing: border-box;
+        @include flex($hor:flex-end);
+    }
+}
+.contact {
+    width: calc(380px - 61px);
+height: 360px;
+background-color: #ffffff; 
+@include flex(flex-start,space-around ,column );
+padding-left: 61px;
+&__title {
+    font-size: 20px;
+font-weight: 700;
+text-transform: uppercase;
+}
+&-phone {
+    width: 151px;
+    height: 42px;
+    @include flex(flex-start,space-between);
+}
+&-address {
+    width: 230px;
+    height: 30px;
+    @include flex(flex-start,space-between);
+    &__text {
+        font-size: 14px;
+    }
+}
+&-email {
+    width: 136px;
+    height: 14px;
+    @include flex($hor:space-between);
+    &__text {
+        color: $colorLB;
+        text-decoration: underline;
+        font-size:14px;
+    }
+}
+}
+
+.number-phone {
+    width: 121px;
+    height: 40px;
+    @include flex(center,space-between ,column);
+    &__number {
+        font-size: 14px;
+font-weight: 500;
+    }
+}
+
+.footer {
+    width: $Procent;
+    height: 196px;
+    background-color: $colorLB;
+    @include flex();
+    &-content {
+        width: $widthArea;
+        height: $Procent;
+        box-sizing: border-box;
+        @include flex($hor:space-between);
+
+    }
+    
+    &-box {
+        width: 222px;
+        height: 103px;
+        @include flex(center,space-between ,column );
+        color: #ffffff;
+        &__text {
+            
+            font-size: 12px;
+        }
+        &__btn {
+            width: 160px;
+            height: 40px;
+            border: 2px solid #ffffff ;
+            background-color:#292929;
+            color: #ffffff;
+            cursor: pointer;
+        }
+    }
+    &-box--right {
+        align-items: flex-end;
+    }
+    &-box--left{
+        align-items: flex-start;
+    }
+    &-contact {
+        width: 172px;
+        height: 101px;
+        @include flex(flex-end,center,column);
+        &__number{
+            font-size: 18px;
+            font-weight: 700;
+        }
+        &__text {
+            font-size: 11px;
+        }
+}
+
+}
+.logo-text--white {
+    color: #ffffff;
+}
+
+
+@media (max-width:941px) {
+    .header {
+        &-content {
+            width: 90%;
+            align-items: flex-start;
+          padding: 0 30px;
+        }
+        &-menu {
+            width: $Procent;
+        }
+        &-callback {
+            width: 175px;
+            flex-direction: column;
+
+        }
+    }
+    .banner {
+        &-content {
+            width: $Procent;
+            padding: 0 30px;
+        }
+    }
+    .product {
+        &-content {
+            width: $Procent;
+        }
+        &-box {
+            width: 150px;
+            &__img {
+                width: $Procent;
+                height: 100px;
+            }
+            &__text {
+                width: 100px;
+                font-size :10px;
+            }
+        }
+    }
+    .advantages {
+        &-content {
+            width: $Procent;
+            padding: 0 30px;
+        }
+        &-box {
+            width: 170px;
+            &__text {
+                width: $Procent;
+            }
+        }
+    }
+    .popular {
+        &-content {
+            width: $Procent;
+        }
+        &-box {
+            width: 120px;
+            &__img {
+                width: $Procent;
+            }
+            &__btn {
+                width: $Procent;
+            }
+        }
+    }
+    .services {
+        &-content {
+            width: $Procent;
+            padding: 0 30px;
+        }
+        &-box {
+            width: 150px;
+            &__img {
+                width: $Procent;
+            }
+        }
+    }
+    .locate {
+        &-content {
+            width: $Procent;
+            padding: 0 30px;
+        }
+    }
+    .footer {
+        &-content {
+            width: $Procent;
+            padding:  0 15px;
+        }
+    }
+}
+
+@media (max-width:500px) {
+    .header{
+        &-content {
+            width: $Procent;
+            align-items: flex-start;
+            padding: 0 5px;
+        }
+        &-logo {
+            width: 131px;
+            &__img {
+                width: 30px;
+            }
+        }
+        &-callback {
+            flex-direction: column;
+        }
+        &-menu {
+            width: $Procent;
+            justify-content: space-between;
+            font-size: 9px;
+        }
+    }
+    .logo-text {
+        margin-left: 15px;
+        &__title {
+            font-size: 16px;
+
+        }
+        &__subtitle {
+            font-size: 10px;
+        }
+    }
+    .banner {
+        &-content {
+            width: 95%;
+            
+        }
+        &-info {
+            width: $Procent;
+        }
+        &-desc {
+            width: $Procent;
+            flex-direction: column;
+        }
+
+    }
+    .product {
+        &-content {
+            width: $Procent;
+
+        }
+        &-box  {
+            width: 100px;
+            height: 400px;
+            &__img {
+                width: 100%;
+                height: 70px;
+            }
+            
+            &__btn {
+                width: 100px;
+            }
+        }
+        
+    }
+    .advantages {
+        &-content {
+            width: $Procent;
+            padding: 0 5px;
+        }
+        &-box {
+            width: 100px;
+            height: 200px;
+            &__title {
+                font-size: 12px;
+                text-align: center;
+            }
+            &__img {
+                width: 35px;
+            }
+            &__text {
+                width: 100px;
+                height: 65px;
+                font-size: 10px;
+                line-height: normal;
+            }
+        }
+    }
+    .popular {
+        &-content {
+            width: $Procent;
+        }
+        &-box {
+            width: 100px;
+            &__img {
+                width: 90%;
+            }
+            &__btn {
+                width: 90%;
+            }
+           
+        }
+        &__sale {
+            font-size: 9px;
+        }
+
+    }
+    .services {
+        &-content {
+            width: $Procent;
+        }
+        &-box {
+            width: 100px;
+            &__img {
+                width: $Procent;
+            }
+            &__text {
+                text-align: center;
+                font-size: 12px;
+            }
+        }
+      
+    }
+    .locate {
+        &-content {
+            width: $Procent;
+            justify-content: center;
+        }
+    }
+    .footer {
+        &-content {
+            width: $Procent;
+            justify-content: space-around;
+        }
+    }
+}
