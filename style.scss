@@ -133,7 +133,7 @@ $Procent:100%;
 .banner {
     width: $Procent;
     height: 550px;
-    background-image:url(/Image/banner.png);
+    background-image:url('Image/banner.png');
     @include backImage();
     background-color: rgba(0,0,0,.8);
     @include flex();
@@ -352,7 +352,7 @@ $Procent:100%;
     width: $Procent;
     height: 520px;
     @include flex();
-    background-image: url(/Image/mab_back.png);
+    background-image: url('Image/mab_back.png');
     @include backImage();
     &-content {
         width: $widthArea;
