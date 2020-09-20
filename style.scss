@@ -105,6 +105,11 @@ $Procent: 100%;
     &__text {
         font-weight: bold;
         text-align: center;
+        color: $colorLB;
+        
+    }
+    &__link{
+        text-decoration: none;
     }
 }
 .logo-text {
@@ -464,6 +469,9 @@ $Procent: 100%;
 }
 
 @media (max-width: 941px) {
+    .bg{
+        height: 5296px;
+    }
     .header {
         &-content {
             width: 90%;
@@ -585,6 +593,12 @@ $Procent: 100%;
     }
 }
 @media (max-width: 440px) {
+    .bg{
+        height: 6496px;
+    }
+    .form {
+        width: 340px;
+    }
     .header-menu {
          
             width: $Procent;

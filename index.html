@@ -11,10 +11,31 @@
 <body>
 
     <main>
+        <div class="bg">
+            <form action="#" class="form" method="post">
+                <div class="form-header">
+                    <h3 class="form-header__title">Заказать обратный звонок</h2>
+                    <div class="form-header__cross">
+
+                    </div>
+                </div>
+                <p class="form__text">Оставьте свои данные и мы свяжемся с вами! </p>
+            
+                   
+                    <input type="text" placeholder="Введите имя" class="form-block__inp">
+                
+              
+                   
+                    <input type="text" placeholder="Введите телефон" class="form-block__inp">
+    
+                <button class="form__btn" type="submit">Отправить</button>
+
+            </form>
+        </div>
         <header class="header">
             <div class="header-content">
                 <div class="header-logo">
-                    <img class="header-logo__img" src="./Image/logoImage.png" alt="">
+                   <a href="#"><img class="header-logo__img" src="./Image/logoImage.png" alt=""></a>
                     <div class="logo-text">
                         <span class="logo-text__title">granit</span>
                         <span class="logo-text__subtitle">Доставка нерудных материалов</span>
@@ -26,19 +47,18 @@
                         <span class="callback-phone__number">8 800 342-13-33</span>
                         <span class="callback-phone__text">Бесплатный звонок по России</span>
                     </div>
-                    <button class="header-callback__button">Обратный звонок</button>
+                    <button class="header-callback__button callback__btn">Обратный звонок</button>
                 </div>
 
             </div>
-            <div class="header-menu">
-                <div class="menu-box"> <span class="menu-box__text">Главная</span></div>
+            <nav class="header-menu">
+                <div class="menu-box"><a href="#" class="menu-box__text menu-box__link">Главная</a></div>
                 <div class="menu-box"><span class="menu-box__text">Каталог</span></div>
-                <div class="menu-box"><span class="menu-box__text">Услуги</span></div>
+                <label class="menu-box menu-label" for="services"><span class="menu-box__text">Услуги</span></label>
                 <div class="menu-box"><span class="menu-box__text">Доставка</span></div>
                 <div class="menu-box"><span class="menu-box__text">О компании</span></div>
-                <div class="menu-box"><span class="menu-box__text">Контакты</span>
-                </div>
-            </div>
+                <label class="menu-box menu-label" for="contact"><span class="menu-box__text">Контакты</span></label>
+            </nav>
         </header>
 
          <section class="banner">
@@ -155,7 +175,7 @@
                 </div>
             </div>
         </section>
-       <section class="services">
+       <section class="services" id="services">
             <div class="services-content">
                 <h2 class="services-content__title">Наши услуги</h2>
                 <div class="services-info">
@@ -177,7 +197,7 @@
 
          <section class="locate">
             <div class="locate-content">
-                <div class="contact">
+                <div class="contact" id="contact">
                     <span class="contact__title">Контакты</span>
                     <div class="contact-phone">
                         <img class="contact-phone__img" src="./Image/phone-receiver.png" alt="">
@@ -205,7 +225,7 @@
             <div class="footer-content">
                 <div class="footer-box footer-box--left">
                     <div class="footer-logo header-logo">
-                        <img class="footer-logo__img" src="./Image/footer-logo.png" alt="">
+                        <a href="#"><img class="footer-logo__img" src="./Image/footer-logo.png" alt=""></a>
                         <div class="logo-text">
                             <span class="logo-text__title">granit</span>
                             <span class="logo-text__subtitle">Доставка нерудных материалов</span>
@@ -218,12 +238,13 @@
                         <span class="footer-contact__number">8 800 342-13-33</span>
                         <span class="footer-contact__text">Бесплатный звонок по России</span>
                     </div>
-                    <button class="footer-box__btn">Обратный звонок</button>
+                    <button class="footer-box__btn callback__btn">Обратный звонок</button>
                 </div>
             </div>
             
         </footer> 
     </main>
+    <script src="./script.js"></script>
 </body>
 
 </html>

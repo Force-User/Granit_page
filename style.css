@@ -159,6 +159,11 @@
 .menu-box__text {
   font-weight: bold;
   text-align: center;
+  color: #292929;
+}
+
+.menu-box__link {
+  text-decoration: none;
 }
 
 .logo-text {
@@ -1000,6 +1005,9 @@
 }
 
 @media (max-width: 941px) {
+  .bg {
+    height: 5296px;
+  }
   .header-content {
     width: 90%;
     -webkit-box-align: start;
@@ -1118,6 +1126,12 @@
 }
 
 @media (max-width: 440px) {
+  .bg {
+    height: 6496px;
+  }
+  .form {
+    width: 340px;
+  }
   .header-menu {
     width: 100%;
     -webkit-box-pack: justify;
