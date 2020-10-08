@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 
-@import url(".form.css");
+@import url("form.css");
 
 @mixin flex($vert: center, $hor: center, $pos: row) {
     display: flex;
